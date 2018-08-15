@@ -56,6 +56,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CB4-z1-yGU" kind="show" id="QXm-Wb-iZP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,6 +166,21 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="CB4-z1-yGU" eventType="touchUpInside" id="BmI-wa-v8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo4-VA-xZh">
+                                <rect key="frame" x="16" y="30" width="64" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="RD6-1W-RKh"/>
+                                    <constraint firstAttribute="height" constant="58" id="w4U-59-KOr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="D0F-06-fzm" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSeque:" id="WmI-z6-gew"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +193,8 @@
                             <constraint firstItem="nzN-mZ-JFz" firstAttribute="leading" secondItem="p7l-Fz-BRl" secondAttribute="leading" constant="16" id="FYH-b7-DrJ"/>
                             <constraint firstItem="Oxv-K7-cxW" firstAttribute="leading" secondItem="p7l-Fz-BRl" secondAttribute="leading" constant="20" id="MDa-c1-wff"/>
                             <constraint firstItem="dWX-xv-QP4" firstAttribute="trailing" secondItem="p7l-Fz-BRl" secondAttribute="trailing" id="TDW-7a-nhm"/>
+                            <constraint firstItem="Uo4-VA-xZh" firstAttribute="leading" secondItem="p7l-Fz-BRl" secondAttribute="leading" constant="16" id="TOE-cM-Imq"/>
+                            <constraint firstItem="Uo4-VA-xZh" firstAttribute="top" secondItem="330-Dl-tOB" secondAttribute="topMargin" constant="10" id="Wc5-7O-eH7"/>
                             <constraint firstItem="dWX-xv-QP4" firstAttribute="top" secondItem="330-Dl-tOB" secondAttribute="top" id="h6F-WK-CyQ"/>
                             <constraint firstItem="p7l-Fz-BRl" firstAttribute="trailing" secondItem="Oxv-K7-cxW" secondAttribute="trailing" constant="20" id="iwQ-v0-VKH"/>
                             <constraint firstItem="p7l-Fz-BRl" firstAttribute="trailing" secondItem="nzN-mZ-JFz" secondAttribute="trailing" constant="16" id="j6J-ig-vQk"/>
@@ -183,10 +203,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p7l-Fz-BRl"/>
                     </view>
+                    <connections>
+                        <segue destination="sdW-K3-dJ7" kind="show" identifier="skillVCSegue" id="FKd-r7-2BP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zg-Un-vWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="D0F-06-fzm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="964" y="133.5832083958021"/>
+            <point key="canvasLocation" x="963.30935251798564" y="133.27338129496403"/>
         </scene>
         <!--SkillVC-->
         <scene sceneID="EoV-BF-KOg">
@@ -283,6 +307,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
